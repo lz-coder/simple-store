@@ -15,6 +15,14 @@
     background-color: #000;
     color: #fff;
     justify-content: space-around;
+    box-shadow: 0 0 2px 2px #333;
+    border-radius: 0 0 .5em .5em;
+}
+
+#header_title a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
 }
 
 #nav_ul {
@@ -51,6 +59,7 @@
     padding: .5em 1em 0.2em;
     border-radius: .5em;
     gap: .5em;
+    position: relative;
 }
 
 .shop-item-figure {
@@ -67,4 +76,29 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.item-button {
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 1px #222;
+    cursor: pointer;
+    transition: all 50ms;
+}
+
+.item-button:hover {
+    transform: scale(1.2);
+    border: 2px solid #fff;
+}
+
+.item-button-icon {
+    color: #fff;
+    font-size: 1.1em;
 }

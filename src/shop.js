@@ -7,10 +7,20 @@ const setShopItems = (items) => {
 
 const setItemsInteractive = () => {
     const items = document.querySelectorAll(".shop-item");
+    const add_button = document.createElement("span");
+    add_button.classList.add("item-button");
+    const add_button_icon = document.createElement("i");
+    add_button_icon.className = "item-button-icon fa fa-cart-shopping";
+    add_button.appendChild(add_button_icon);
+
     console.log(items);
     items.forEach(e => {
         e.addEventListener("mouseover", () => {
-            console.log(`${e}: mouseover`);
+            e.appendChild(add_button);
+        });
+        e.addEventListener("mouseleave", () => {
+            e.removeChild(add_button);
+            console.log("leave");
         });
     });
 }
